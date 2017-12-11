@@ -17,8 +17,7 @@ namespace WiFiNetworks
         public List<WiFiNetwork> GetNetworks()
         {
             var networks = new List<WiFiNetwork>();
-            var accessPoints = _wifi.GetAccessPoints();
-            foreach (var accessPoint in accessPoints)
+            foreach (var accessPoint in _wifi.GetAccessPoints())
             {
                 networks.Add(new WiFiNetwork()
                 {

@@ -95,10 +95,7 @@ namespace WiFiNetworks
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (NetworkList.SelectedItems.Count == 0)
-            {
-                UpdateNetworkList();
-            }
+             UpdateNetworkList();
         }
     }
 }

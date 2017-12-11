@@ -22,8 +22,10 @@ namespace WiFiNetworks
             var accessPoint = wifi.GetAccessPoints().FirstOrDefault(x => x.Name.Equals(Name));
             if (accessPoint != null)
             {
-                var authRequest = new AuthRequest(accessPoint);
-                authRequest.Password = password;
+                var authRequest = new AuthRequest(accessPoint)
+                {
+                    Password = password
+                };
                 return accessPoint.Connect(authRequest);
             }
             return false;
